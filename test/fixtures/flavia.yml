@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  flaviaUno: MyString
+  flaviaDue: MyString
+
+two:
+  flaviaUno: MyString
+  flaviaDue: MyString

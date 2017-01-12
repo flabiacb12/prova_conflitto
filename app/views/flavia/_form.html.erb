@@ -1,0 +1,27 @@
+<%= form_for(flavium) do |f| %>
+  <% if flavium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flavium.errors.count, "error") %> prohibited this flavium from being saved:</h2>
+
+      <ul>
+      <% flavium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :flaviaUno %>
+    <%= f.text_field :flaviaUno %>
+  </div>
+
+  <div class="field">
+    <%= f.label :flaviaDue %>
+    <%= f.text_field :flaviaDue %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
