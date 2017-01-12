@@ -1,0 +1,27 @@
+<%= form_for(mario) do |f| %>
+  <% if mario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mario.errors.count, "error") %> prohibited this mario from being saved:</h2>
+
+      <ul>
+      <% mario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :marioUno %>
+    <%= f.text_field :marioUno %>
+  </div>
+
+  <div class="field">
+    <%= f.label :marioDue %>
+    <%= f.text_field :marioDue %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
