@@ -1,0 +1,1 @@
+json.array! @flavia, partial: 'flavia/flavium', as: :flavium
