@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Flavia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Flaviauno</th>
+      <th>Flaviadue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flavia.each do |flavium| %>
+      <tr>
+        <td><%= flavium.flaviaUno %></td>
+        <td><%= flavium.flaviaDue %></td>
+        <td><%= link_to 'Show', flavium %></td>
+        <td><%= link_to 'Edit', edit_flavium_path(flavium) %></td>
+        <td><%= link_to 'Destroy', flavium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flavium', new_flavium_path %>
