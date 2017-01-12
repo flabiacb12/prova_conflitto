@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Marios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mariouno</th>
+      <th>Mariodue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @marios.each do |mario| %>
+      <tr>
+        <td><%= mario.marioUno %></td>
+        <td><%= mario.marioDue %></td>
+        <td><%= link_to 'Show', mario %></td>
+        <td><%= link_to 'Edit', edit_mario_path(mario) %></td>
+        <td><%= link_to 'Destroy', mario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mario', new_mario_path %>
